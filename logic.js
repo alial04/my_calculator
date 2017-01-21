@@ -25,7 +25,7 @@ function answer()
 function backspace()
 {
     var number=box.value;
-    var len=number.lenght-1;
+    var len=number.length-1;
     var newnumber=number.substring(0,len)
     box.value=newnumber;
     
