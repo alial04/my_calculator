@@ -1,14 +1,12 @@
 <html>
-   <head>
-        <link rel="stylesheet" type="text/css" href="design.css">
-    </<head>
-        
+<head><link rel="stylesheet" type="text/css" href="design.css" />
+
 <title>Calculator</title>
 
 <body>
     <div id="Calculator">
-        <form>
-                <input type="text" id="display"><br>
+        <form action="#" onsubmit="answer()">
+                <input type="text" id="display" pattern="[0-9+-/*]+" autocomplete="off" title="Please input valid numbers or operators"><br>
 
                 <input type="button" value="c" id="keys" onclick="addtoscreen('C')">
                 <input type="button" value="<--" id="keys" onclick="backspace()">
@@ -35,10 +33,7 @@
                 <input type="button" value="=" id="equal" onclick="answer()">
 
         </form>
-
     </div>
-
-    <script src="logic.js"></script>
+<script src="logic.js"></script>
 </body>
-
 </html>
