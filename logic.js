@@ -1,5 +1,3 @@
-
-
 var box=document.getElementById('display');
 
 function addtoscreen(x)
@@ -13,7 +11,6 @@ function addtoscreen(x)
     }
 
 }
-
 
 function answer()
 {
