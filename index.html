@@ -1,39 +1,92 @@
-<html>
-<head><link rel="stylesheet" type="text/css" href="design.css" />
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>MiniCalc</title>
 
-<title>Calculator</title>
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/favicon-hi.png">
 
-<body>
-    <div id="Calculator">
-        <form action="#" onsubmit="answer()">
-                <input type="text" id="display" pattern="[0-9+-/*()]+" autocomplete="off" title="Please input valid numbers or operators"><br>
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="MiniCalc">
+    <link rel="apple-touch-icon-precomposed" href="images/favicon-hi.png">
 
-                <input type="button" value="c" id="keys" onclick="addtoscreen('C')">
-                <input type="button" value="<—" id="keys" onclick="backspace()">
-                <input type="button" value="X^3" id="keys" onclick="power(3)">
-                <input type="button" value="+" id="keys" onclick="addtoscreen('+')"><br>
-                
-                <input type="button" value="9" id="keys" onclick="addtoscreen('9')">
-                <input type="button" value="8" id="keys" onclick="addtoscreen('8')">
-                <input type="button" value="7" id="keys" onclick="addtoscreen('7')">
-                <input type="button" value="-" id="keys" onclick="addtoscreen('-')"><br>
-                
-                <input type="button" value="6" id="keys" onclick="addtoscreen('6')">
-                <input type="button" value="5" id="keys" onclick="addtoscreen('5')">
-                <input type="button" value="4" id="keys" onclick="addtoscreen('4')">
-                <input type="button" value="*" id="keys" onclick="addtoscreen('*')"><br>
-                
-                <input type="button" value="3" id="keys" onclick="addtoscreen('3')">
-                <input type="button" value="2" id="keys" onclick="addtoscreen('2')">
-                <input type="button" value="1" id="keys" onclick="addtoscreen('1')">
-                <input type="button" value="/" id="keys" onclick="addtoscreen('/')"><br>
-                
-                <input type="button" value="0" id="keys" onclick="addtoscreen('0')">
-                <input type="button" value="." id="keys" onclick="addtoscreen('.')">
-                <input type="button" value="=" id="equal" onclick="answer()">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/favicon-hi.png">
+    <meta name="msapplication-TileColor" content="#448aff">
 
-        </form>
-    </div>
-<script src="logic.js"></script>
-</body>
+    <link rel="shortcut icon" href="images/favicon-hi.png">
+	
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles/material.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+	
+	.card-square {
+		width: 380px;
+		height: 360px;
+	}
+    </style>
+  </head>
+  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <main class="mdl-layout__content">
+        <div class="mdl-layout__tab-panel is-active" id="overview">
+          <section class="card-square section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+              <div class="mdl-card__supporting-text">
+			  <form action="#" onsubmit="answer()">
+				<div class="mdl-textfield mdl-js-textfield">
+					<input class="mdl-textfield__input" type="text" id="display" pattern="[0-9+-/*()]+" />
+				</div><br>
+				
+				<input class="mdl-button mdl-js-button mdl-js-ripple-effect" type="button" value="DEL" id="keys" onclick="addtoscreen('C')">
+				<input class="mdl-button mdl-js-button mdl-js-ripple-effect" type="button" value="<" id="keys" onclick="backspace()">
+				<input class="mdl-button mdl-js-button mdl-js-ripple-effect" type="button" value="X^3" id="keys" onclick="power(3)">
+				<input class="mdl-button mdl-js-button mdl-js-ripple-effect" type="button" value="+" id="keys" onclick="addtoscreen('+')"><br>
+				
+				<input class="mdl-button mdl-js-button mdl-js-ripple-effect" type="button" value="9" id="keys" onclick="addtoscreen('9')">
+				<input class="mdl-button mdl-js-button mdl-js-ripple-effect" type="button" value="8" id="keys" onclick="addtoscreen('8')">
+				<input class="mdl-button mdl-js-button mdl-js-ripple-effect" type="button" value="7" id="keys" onclick="addtoscreen('7')">
+				<input class="mdl-button mdl-js-button mdl-js-ripple-effect" type="button" value="-" id="keys" onclick="addtoscreen('-')"><br>
+				
+				<input class="mdl-button mdl-js-button mdl-js-ripple-effect" type="button" value="6" id="keys" onclick="addtoscreen('6')">
+				<input class="mdl-button mdl-js-button mdl-js-ripple-effect" type="button" value="5" id="keys" onclick="addtoscreen('5')">
+				<input class="mdl-button mdl-js-button mdl-js-ripple-effect" type="button" value="4" id="keys" onclick="addtoscreen('4')">
+				<input class="mdl-button mdl-js-button mdl-js-ripple-effect" type="button" value="*" id="keys" onclick="addtoscreen('*')"><br>
+				
+				<input class="mdl-button mdl-js-button mdl-js-ripple-effect" type="button" value="3" id="keys" onclick="addtoscreen('3')">
+				<input class="mdl-button mdl-js-button mdl-js-ripple-effect" type="button" value="2" id="keys" onclick="addtoscreen('2')">
+				<input class="mdl-button mdl-js-button mdl-js-ripple-effect" type="button" value="1" id="keys" onclick="addtoscreen('1')">
+				<input class="mdl-button mdl-js-button mdl-js-ripple-effect" type="button" value="/" id="keys" onclick="addtoscreen('/')"><br>
+				
+				<input class="mdl-button mdl-js-button mdl-js-ripple-effect" type="button" value="." id="keys" onclick="addtoscreen('.')">
+				<input class="mdl-button mdl-js-button mdl-js-ripple-effect" type="button" value="0" id="keys" onclick="addtoscreen('0')">
+				<input class="mdl-button mdl-js-button mdl-js-ripple-effect" type="button" value="=" id="keys" onclick="answer()"><br>
+			  <form>
+			  </div>
+			  	<script src="JS/logic.js"></script>
+            </div>
+          </section>
+        </div>
+        </div>
+      </main>
+	 </div>
+    <script src="JS/material.min.js"></script>
+  </body>
 </html>
