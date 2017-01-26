@@ -13,8 +13,12 @@ function addtoscreen(x)
 function answer()
 {
     x=box.value;
-    x=eval(x);
-    box.value =x;
+	if (!x && x == "undefined") {
+		x=eval(x);
+		box.value =x;
+	} else {
+		box.value ='0';
+	}
 }
 
 function backspace()
