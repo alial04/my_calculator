@@ -3,7 +3,11 @@ var box=document.getElementById('display');
 function addtoscreen(x)
 {
     box.value +=x;
-    if(x=='C') { box.value=''; }
+
+    if(x=='C')
+    {
+       box.value='';
+    }
 }
 
 function answer()
