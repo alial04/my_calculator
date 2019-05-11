@@ -3,37 +3,43 @@
 
 <title>Calculator</title>
 
+<body style="background-color:black;">
+    </body>
 <body>
-    <div id="Calculator">
+        <br><div class="enjoy-css" ><br> Välkommen till min fula kalkylator ;)</div>
+    <div id="Calculator">  
         <form action="#" onsubmit="answer()">
-                <input type="text" id="display" pattern="[0-9+-/*()]+" autocomplete="off" title="Please input valid numbers or operators"><br>
+              <input type="text" id="display" pattern="[0-9+-/*()]+" autocomplete="off" title="Please input valid numbers or operators"><br>
 
                 <input type="button" value="c" id="keys" onclick="addtoscreen('C')">
                 <input type="button" value="<—" id="keys" onclick="backspace()">
                 <input type="button" value="X^3" id="keys" onclick="power(3)">
-                <input type="button" value="+" id="keys" onclick="addtoscreen('+')"><br>
+                <input type="button" value="+" id="keys" onclick="addtoscreen('+')">
                 
                 <input type="button" value="9" id="keys" onclick="addtoscreen('9')">
                 <input type="button" value="8" id="keys" onclick="addtoscreen('8')">
                 <input type="button" value="7" id="keys" onclick="addtoscreen('7')">
-                <input type="button" value="-" id="keys" onclick="addtoscreen('-')"><br>
+                <input type="button" value="-" id="keys" onclick="addtoscreen('-')">
                 
                 <input type="button" value="6" id="keys" onclick="addtoscreen('6')">
                 <input type="button" value="5" id="keys" onclick="addtoscreen('5')">
                 <input type="button" value="4" id="keys" onclick="addtoscreen('4')">
-                <input type="button" value="*" id="keys" onclick="addtoscreen('*')"><br>
+                <input type="button" value="*" id="keys" onclick="addtoscreen('*')">
                 
                 <input type="button" value="3" id="keys" onclick="addtoscreen('3')">
                 <input type="button" value="2" id="keys" onclick="addtoscreen('2')">
                 <input type="button" value="1" id="keys" onclick="addtoscreen('1')">
-                <input type="button" value="/" id="keys" onclick="addtoscreen('/')"><br>
+                <input type="button" value="/" id="keys" onclick="addtoscreen('/')">
                 
                 <input type="button" value="0" id="keys" onclick="addtoscreen('0')">
                 <input type="button" value="." id="keys" onclick="addtoscreen('.')">
                 <input type="button" value="=" id="equal" onclick="answer()">
 
         </form>
+<a class="github-button" href="https://github.com/alial04/my_calculator" data-size="large" aria-label="Visit @alial04 on GitHub">Visit @alial04</a>
     </div>
 <script src="logic.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script type="text/javascript" script-name="annie-use-your-telescope" src="http://use.edgefonts.net/annie-use-your-telescope.js"></script>
 </body>
 </html>

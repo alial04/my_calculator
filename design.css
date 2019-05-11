@@ -54,3 +54,17 @@
     color: black;
     font-weight: bold;
 }
+
+.enjoy-css {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: none;
+    font: italic normal bold 25px/1 "annie-use-your-telescope", Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    letter-spacing: 3px;
+    word-spacing: -6px;
+  }
